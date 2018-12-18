@@ -1,0 +1,26 @@
+﻿@model MvcCSharp.Models.ViewModels.OrderListViewModel
+
+@{
+    ViewBag.Title = "Index";
+    var lastPage = Model.PageNumber - 1;
+    var nextPage = Model.PageNumber + 1;
+    var hasLastPage = lastPage > 0;
+    var hasNextPage = nextPage < Model.TotalPages;
+
+    var prevStyles = hasLastPage ? "btn btn-danger" : "btn btn-danger disabled";
+    
+}
+
+<h2>Orders</h2>
+<h4>
+    Page @Model.PageNumber of @Model.TotalPages
+</h4>
+
+<div class="btn-group" role="group" aria-label="Basic example">
+    @Html.ActionLink("< Prev", "Index", new { id = lastPage }, new { @class = prevStyles })
+    @Html.ActionLink("Next >", "Index", new { id = nextPage }, new { @class = "btn btn-danger" })
+</div>
+
+@Html.DisplayFor(m => m,"OrderListView")
+
+@Html.EditorFor(m => m.Orders,"OrderListViewModel")

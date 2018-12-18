@@ -1,0 +1,10 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/MvcApp.CS/.vs
+/MvcApp.CS/MvcCSharp/bin
+/MvcApp.CS/MvcCSharp/obj
+/MvcApp.CS/MvcUnitTestDemo/bin
+/MvcApp.CS/MvcUnitTestDemo/obj
+/MvcApp.CS/packages
